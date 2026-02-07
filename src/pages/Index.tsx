@@ -38,6 +38,10 @@ const Index = () => {
       {/* Stats Strip */}
       <section className="border-b border-border bg-muted/50 py-8" aria-label="Statistics">
         <div className="container mx-auto grid grid-cols-2 gap-6 px-4 md:grid-cols-4">
+          {/* Add margin to left-justified text */}
+          <div className="mt-4 mb-4 ml-4 mr-4">
+            {/* ...existing content... */}
+          </div>
           {[
             { icon: Calendar, value: '15+', label: t('Years Active', 'ವರ್ಷಗಳು') },
             { icon: Award, value: `${awards.length}`, label: t('DVG Awards', 'ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿಗಳು') },

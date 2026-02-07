@@ -11,23 +11,30 @@ const Header = () => {
 
   const items = language === 'en' ? navItems.en : navItems.kn;
 
+  // Vite: use import for static assets
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const logo = new URL('@/assets/logo.jpeg', import.meta.url).href;
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo / Title */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-            <span className="font-display text-lg font-bold text-primary-foreground">ಡಿ</span>
-          </div>
-          <div className="hidden sm:block">
-            <h1 className="font-display text-lg font-bold leading-tight text-foreground">
-              {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
-            </h1>
-            <p className="text-xs text-muted-foreground">
-              {t('Mysuru', 'ಮೈಸೂರು')}
-            </p>
-          </div>
-        </Link>
+      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <div className="container mx-auto flex items-center justify-between px-6 py-4 md:px-8 md:py-5">
+          {/* Logo / Title */}
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="DVG Balaga Logo" className="h-10 w-10 rounded-full object-cover border border-primary" />
+            <div className="hidden sm:block">
+              <h1 className="font-display text-lg font-bold leading-tight text-foreground">
+                {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
+              </h1>
+              <p className="text-xs text-muted-foreground">
+                {t('Mysuru', 'ಮೈಸೂರು')}
+              </p>
+            </div>
+            {/* Show name in mobile view */}
+            <div className="block sm:hidden">
+              <span className="font-display text-base font-bold text-foreground ml-2">
+                {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
+              </span>
+            </div>
+          </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
