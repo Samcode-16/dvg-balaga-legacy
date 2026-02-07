@@ -17,7 +17,7 @@ const Hero = () => {
             'Literary gathering at DVG Balaga Prathisthana',
             'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನದ ಸಾಹಿತ್ಯ ಕೂಟ'
           )}
-          className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
         />
         <div className="hero-gradient absolute inset-0" />
       </div>
