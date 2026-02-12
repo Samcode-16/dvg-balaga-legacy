@@ -24,19 +24,16 @@ const EventCard = ({ event }: EventCardProps) => {
   return (
     <article className="card-literary overflow-hidden p-0">
       <div className="p-6">
-        {/* Type Badge */}
         <div className="mb-3">
           <span className="badge-award">{typeLabel}</span>
         </div>
 
-        {/* Title */}
         <h3 className="font-display text-xl font-bold text-foreground">
           <Link to={`/events#${event.id}`} className="transition-colors hover:text-primary">
             {title}
           </Link>
         </h3>
 
-        {/* Meta */}
         <div className="mt-3 flex flex-wrap gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
             <Calendar className="h-4 w-4" aria-hidden="true" />
@@ -48,12 +45,10 @@ const EventCard = ({ event }: EventCardProps) => {
           </div>
         </div>
 
-        {/* Description */}
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground line-clamp-3">
           {description}
         </p>
 
-        {/* Guest info */}
         {(event.president || event.chiefGuest) && (
           <div className="mt-4 flex items-start gap-1.5 rounded bg-muted px-3 py-2 text-xs text-muted-foreground">
             <Users className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />

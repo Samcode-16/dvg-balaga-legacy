@@ -9,7 +9,6 @@ const Publications = () => {
 
   return (
     <>
-      {/* Hero */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0">
           <img src={pubsHero} alt="" className="h-full w-full object-cover" />
@@ -28,7 +27,6 @@ const Publications = () => {
         </div>
       </section>
 
-      {/* Publications Grid */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -47,7 +45,6 @@ const Publications = () => {
         </div>
       </section>
 
-      {/* Schema.org structured data for books */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

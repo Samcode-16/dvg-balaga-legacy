@@ -21,7 +21,6 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
 
   return (
     <article className="card-literary flex flex-col overflow-hidden">
-      {/* Cover placeholder */}
       <div className="flex h-48 items-center justify-center bg-muted">
         <div className="text-center">
           <BookOpen className="mx-auto h-12 w-12 text-muted-foreground/40" aria-hidden="true" />
@@ -32,28 +31,23 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        {/* Type + Year */}
         <div className="mb-3 flex items-center gap-2">
           <span className="badge-award">{typeLabel}</span>
           <span className="text-xs text-muted-foreground">{publication.year}</span>
         </div>
 
-        {/* Title */}
         <h3 className="font-display text-lg font-bold text-foreground">
           {title}
         </h3>
 
-        {/* Author */}
         <p className="mt-1 text-sm italic text-muted-foreground">
           {publication.author}
         </p>
 
-        {/* Description */}
         <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground line-clamp-3">
           {description}
         </p>
 
-        {/* Price */}
         {publication.price && (
           <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
             <span className="text-lg font-bold text-foreground">₹{publication.price}</span>

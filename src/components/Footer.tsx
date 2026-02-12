@@ -11,7 +11,6 @@ const Footer = () => {
     <footer className="border-t border-border bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
-          {/* About */}
           <div>
             <h3 className="font-display text-xl font-bold">
               {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
@@ -24,7 +23,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="font-display text-lg font-semibold">
               {t('Quick Links', 'ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು')}
@@ -42,7 +40,6 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-display text-lg font-semibold">
               {t('Contact', 'ಸಂಪರ್ಕ')}
@@ -62,7 +59,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-10 border-t border-primary-foreground/20 pt-6 text-center text-xs opacity-60">
           <p>
             © {new Date().getFullYear()} DVG Balaga Prathisthana, Mysuru.{' '}

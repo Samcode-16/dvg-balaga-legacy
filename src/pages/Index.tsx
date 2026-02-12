@@ -15,7 +15,6 @@ const Index = () => {
 
   return (
     <>
-      {/* SEO structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -35,13 +34,8 @@ const Index = () => {
 
       <Hero />
 
-      {/* Stats Strip */}
       <section className="border-b border-border bg-muted/50 py-8" aria-label="Statistics">
         <div className="container mx-auto grid grid-cols-2 gap-6 px-4 md:grid-cols-4">
-          {/* Add margin to left-justified text */}
-          <div className="mt-4 mb-4 ml-4 mr-4">
-            {/* ...existing content... */}
-          </div>
           {[
             { icon: Calendar, value: '15+', label: t('Years Active', 'ವರ್ಷಗಳು') },
             { icon: Award, value: `${awards.length}`, label: t('DVG Awards', 'ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿಗಳು') },
@@ -57,7 +51,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Recent Events */}
       <section className="py-16 md:py-20" aria-label="Events">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -86,7 +79,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Publications */}
       <section className="bg-muted/30 py-16 md:py-20" aria-label="Publications">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -115,7 +107,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Recent Awards */}
       <section className="py-16 md:py-20" aria-label="Awards">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -155,7 +146,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About CTA */}
       <section className="bg-primary py-16 text-primary-foreground" aria-label="About call to action">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-3xl font-bold md:text-4xl">

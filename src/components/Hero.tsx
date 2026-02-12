@@ -9,7 +9,6 @@ const Hero = () => {
 
   return (
     <section className="relative overflow-hidden" aria-label="Hero">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -22,10 +21,8 @@ const Hero = () => {
         <div className="hero-gradient absolute inset-0" />
       </div>
 
-      {/* Content */}
       <div className="relative container mx-auto px-4 py-24 md:py-36 lg:py-44">
         <div className="max-w-2xl animate-fade-in">
-          {/* Ornamental line */}
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px w-12 bg-gold" />
             <span className="text-sm font-medium tracking-widest uppercase text-gold">
@@ -62,7 +59,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Kagga Quote */}
         <div className="mt-16 max-w-md animate-fade-in rounded-lg border border-gold/20 bg-background/10 p-6 backdrop-blur-sm" style={{ animationDelay: '0.3s' }}>
           <blockquote className="font-display text-lg italic text-primary-foreground/90">
             {t(

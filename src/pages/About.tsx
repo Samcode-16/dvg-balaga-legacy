@@ -19,7 +19,6 @@ const About = () => {
 
   return (
     <>
-      {/* Page Header */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0">
           <img src={heroImage} alt="" className="h-full w-full object-cover" />
@@ -38,7 +37,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-3xl px-4">
           <SectionHeading title={{ en: content.foundingTitle, kn: content.foundingTitle }} />
@@ -53,7 +51,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Milestones */}
       <section className="bg-muted/30 py-16 md:py-20" aria-label="Milestones">
         <div className="container mx-auto max-w-3xl px-4">
           <SectionHeading
@@ -74,7 +71,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Future Vision */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <SectionHeading
@@ -86,7 +82,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Trustees */}
       <section className="bg-primary py-16 text-primary-foreground">
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-display text-3xl font-bold">

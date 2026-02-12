@@ -11,7 +11,6 @@ const Timeline = ({ awards }: TimelineProps) => {
 
   return (
     <div className="relative">
-      {/* Vertical line — hidden on mobile, shown on md+ */}
       <div className="timeline-line hidden md:block" aria-hidden="true" />
 
       <div className="flex flex-col gap-8 md:gap-12">
@@ -28,7 +27,6 @@ const Timeline = ({ awards }: TimelineProps) => {
               } items-start md:items-center gap-4 md:gap-8`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Content Card */}
               <div className={`w-full md:w-[calc(50%-2rem)] ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
                 <div className="card-literary p-5">
                   <div className="flex items-center gap-2 mb-2">
@@ -51,12 +49,10 @@ const Timeline = ({ awards }: TimelineProps) => {
                 </div>
               </div>
 
-              {/* Center dot */}
               <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 h-4 w-4 items-center justify-center rounded-full border-2 border-gold bg-background" aria-hidden="true">
                 <div className="h-2 w-2 rounded-full bg-gold" />
               </div>
 
-              {/* Spacer for the other side */}
               <div className="hidden md:block w-[calc(50%-2rem)]" />
             </div>
           );

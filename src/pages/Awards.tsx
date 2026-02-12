@@ -9,7 +9,6 @@ const Awards = () => {
 
   return (
     <>
-      {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground md:py-28">
         <div className="container mx-auto px-4 text-center">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold bg-primary-foreground/10">
@@ -27,7 +26,6 @@ const Awards = () => {
         </div>
       </section>
 
-      {/* Awards Timeline */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -44,7 +42,6 @@ const Awards = () => {
         </div>
       </section>
 
-      {/* BGL Swamy Award */}
       <section className="bg-muted/30 py-16">
         <div className="container mx-auto max-w-2xl px-4 text-center">
           <h2 className="font-display text-2xl font-bold text-foreground">

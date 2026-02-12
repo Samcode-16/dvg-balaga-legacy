@@ -7,7 +7,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground md:py-28">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-display text-4xl font-bold md:text-5xl">
@@ -25,7 +24,6 @@ const Contact = () => {
       <section className="py-16 md:py-20">
         <div className="container mx-auto max-w-4xl px-4">
           <div className="grid gap-10 md:grid-cols-2">
-            {/* Contact Info */}
             <div>
               <SectionHeading
                 title={{ en: 'Get in Touch', kn: 'ಸಂಪರ್ಕದಲ್ಲಿರಿ' }}
@@ -72,7 +70,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form Placeholder */}
             <div>
               <SectionHeading
                 title={{ en: 'Send a Message', kn: 'ಸಂದೇಶ ಕಳುಹಿಸಿ' }}

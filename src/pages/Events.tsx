@@ -9,7 +9,6 @@ const Events = () => {
 
   return (
     <>
-      {/* Hero */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0">
           <img src={eventsHero} alt="" className="h-full w-full object-cover" />
@@ -28,7 +27,6 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Events Grid */}
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <SectionHeading
@@ -43,7 +41,6 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Schema.org structured data for first event */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
