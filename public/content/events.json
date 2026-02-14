@@ -1,0 +1,60 @@
+[
+  {
+    "id": "mankuthimmana-saptaha-2016",
+    "title": {
+      "en": "5-Day Upanyasa on Mankuthimmana Kagga",
+      "kn": "ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ ಕುರಿತು ೫ ದಿನಗಳ ಉಪನ್ಯಾಸ"
+    },
+    "description": {
+      "en": "A grand 5-day discourse on DVG's Mankuthimmana Kagga by Vidwan G S Natesh at Nadabrahma Sangeetha Sabha, Mysuru. The programme drew a huge gathering with the hall overflowing with attendees.",
+      "kn": "ಮೈಸೂರಿನ ನಾದಬ್ರಹ್ಮ ಸಂಗೀತ ಸಭೆಯಲ್ಲಿ ವಿದ್ವಾನ್ ಜಿ.ಎಸ್. ನಟೇಶ ಅವಸರು ನೀಡಿದ ಡಿ.ವಿ.ಜಿ ಅವರ ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ ಕುರಿತ ೫ ದಿನಗಳ ಭವ್ಯ ಉಪನ್ಯಾಸ. ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಅಪಾರ ಸಂಖ್ಯೆಯ ಸಾಹಿತ್ಯಾಸಕ್ತರು ಬಂದಿದ್ದರು."
+    },
+    "date": "2014",
+    "location": "Nadabrahma Sangeetha Sabha, Mysuru",
+    "type": "upanyasa"
+  },
+  {
+    "id": "dvg-award-2024",
+    "title": {
+      "en": "DVG Prashasti 2024 — Sri Satyesh Bellur",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ೨೦೨೪ — ಶ್ರೀ ಸತ್ಯೇಶ ಬೆಳ್ಳೂರು"
+    },
+    "description": {
+      "en": "The DVG Award for 2024 was conferred on Sri Satyesh Bellur, a poet and corporate trainer who wrote 'Navyajeevi' as muktaka sahitya. Dr. Gururaja Karajagi presided over the meeting along with Sri K C Shivappa. The autobiography 'Saakshi' of Dr. Karajagi was also released during the occasion.",
+      "kn": "೨೦೨೪ ರ ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿಯನ್ನು ಕವಿ ಮತ್ತು ಕಾರ್ಪೊರೇಟ್ ತರಬೇತುದಾರ ಶ್ರೀ ಸತ್ಯೇಶ ಬೆಳ್ಳೂರು ಅವರಿಗೆ ನೀಡಲಾಯಿತು. ಅವರು 'ನವ್ಯಜೀವಿ' ಎಂಬ ಮುಕ್ತಕ ಸಾಹಿತ್ಯವನ್ನು ಬರೆದಿದ್ದಾರೆ. ಡಾ. ಗುರುರಾಜ ಕಾರಜಗಿ ಅವಸರು ಅಧ್ಯಕ್ಷತೆ ವಹಿಸಿದ್ದರು."
+    },
+    "date": "2024",
+    "location": "TBD",
+    "type": "award",
+    "president": "Dr. Gururaja Karajagi",
+    "chiefGuest": "Sri K C Shivappa"
+  },
+  {
+    "id": "geetha-shankara-2025",
+    "title": {
+      "en": "Geetha Shankara — Adishankara Stotras Programme",
+      "kn": "ಗೀತ ಶಂಕರ — ಆದಿಶಂಕರ ಸ್ತೋತ್ರ ಕಾರ್ಯಕ್ರಮ"
+    },
+    "description": {
+      "en": "A programme on Adishankara Stotras conducted in May 2025 at Nadabrahma Sangeetha Sabha, Mysuru. Vidwan Dr. R S Nandakumar rendered the programme. Conducted jointly by Brahmavidya Foundation and DVG Balaga Prathisthana.",
+      "kn": "ಮೇ ೨೦೨೫ ರಲ್ಲಿ ಮೈಸೂರಿನ ನಾದಬ್ರಹ್ಮ ಸಂಗೀತ ಸಭೆಯಲ್ಲಿ ಆದಿಶಂಕರ ಸ್ತೋತ್ರಗಳ ಕಾರ್ಯಕ್ರಮ. ವಿದ್ವಾನ ಡಾ. ಆರ್.ಎಸ್. ನಂದಕುಮಾರ್ ಅವರು ಕಾರ್ಯಕ್ರಮ ನಡೆಸಿಕೊಟ್ಟರು."
+    },
+    "date": "May 2025",
+    "location": "Nadabrahma Sangeetha Sabha, Mysuru",
+    "type": "seminar"
+  },
+  {
+    "id": "dvg-sahitya-seminar-2026",
+    "title": {
+      "en": "Seminar on DVG's Literature",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಸಾಹಿತ್ಯ ಕುರಿತು ವಿಚಾರ ಸಂಕಿರಣ"
+    },
+    "description": {
+      "en": "A seminar on DVG's literature conducted in November 2026. Shatavadhani Dr. R Ganesh, Sri B N Shashikiran, Sri Suryaprakash Pandith, and Sri Sandeep Balakrishna delivered lectures on DVG's literature.",
+      "kn": "ನವೆಂಬರ್ ೨೦೨೬ ರಲ್ಲಿ ಡಿ.ವಿ.ಜಿ ಸಾಹಿತ್ಯ ಕುರಿತ ವಿಚಾರ ಸಂಕಿರಣ. ಶತಾವಧಾನಿ ಡಾ. ಆರ್. ಗಣೇಶ, ಶ್ರೀ ಬಿ.ಎನ್. ಶಶಿಕಿರಣ, ಶ್ರೀ ಸೂರ್ಯಪ್ರಕಾಶ ಪಂಡಿತ, ಮತ್ತು ಶ್ರೀ ಸಂದೀಪ ಬಾಲಕೃಷ್ಣ ಅವರು ಉಪನ್ಯಾಸ ನೀಡಿದರು."
+    },
+    "date": "November 2026",
+    "location": "TBD",
+    "type": "seminar"
+  }
+]

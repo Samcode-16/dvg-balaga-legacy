@@ -1,11 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import EventCard from '@/components/EventCard';
 import SectionHeading from '@/components/SectionHeading';
-import { events } from '@/data/content';
+import { useEvents } from '@/hooks/useContent';
+import { Skeleton } from '@/components/ui/skeleton';
 import eventsHero from '@/assets/events-hero.jpg';
 
 const Events = () => {
   const { t } = useLanguage();
+  const { data: events = [], isLoading } = useEvents();
 
   return (
     <>
@@ -34,31 +36,37 @@ const Events = () => {
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {events.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
+            {isLoading
+              ? Array.from({ length: 4 }).map((_, i) => (
+                  <Skeleton key={i} className="h-48 rounded-lg" />
+                ))
+              : events.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
           </div>
         </div>
       </section>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Event',
-            name: events[0].title.en,
-            description: events[0].description.en,
-            startDate: events[0].date,
-            location: {
-              '@type': 'Place',
-              name: events[0].location,
-              address: { '@type': 'PostalAddress', addressLocality: 'Mysuru', addressCountry: 'IN' },
-            },
-            organizer: { '@type': 'Organization', name: 'DVG Balaga Prathisthana' },
-          }),
-        }}
-      />
+      {events.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Event',
+              name: events[0].title.en,
+              description: events[0].description.en,
+              startDate: events[0].date,
+              location: {
+                '@type': 'Place',
+                name: events[0].location,
+                address: { '@type': 'PostalAddress', addressLocality: 'Mysuru', addressCountry: 'IN' },
+              },
+              organizer: { '@type': 'Organization', name: 'DVG Balaga Prathisthana' },
+            }),
+          }}
+        />
+      )}
     </>
   );
 };

@@ -1,11 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import PublicationCard from '@/components/PublicationCard';
 import SectionHeading from '@/components/SectionHeading';
-import { publications } from '@/data/content';
+import { usePublications } from '@/hooks/useContent';
+import { Skeleton } from '@/components/ui/skeleton';
 import pubsHero from '@/assets/publications-hero.jpg';
 
 const Publications = () => {
   const { t } = useLanguage();
+  const { data: publications = [], isLoading } = usePublications();
 
   return (
     <>
@@ -38,9 +40,13 @@ const Publications = () => {
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {publications.map((pub) => (
-              <PublicationCard key={pub.id} publication={pub} />
-            ))}
+            {isLoading
+              ? Array.from({ length: 3 }).map((_, i) => (
+                  <Skeleton key={i} className="h-64 rounded-lg" />
+                ))
+              : publications.map((pub) => (
+                  <PublicationCard key={pub.id} publication={pub} />
+                ))}
           </div>
         </div>
       </section>

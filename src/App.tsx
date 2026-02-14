@@ -8,8 +8,10 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Events from "./pages/Events";
+import EventDetail from "./pages/EventDetail";
 import Publications from "./pages/Publications";
 import Awards from "./pages/Awards";
+import AwardDetail from "./pages/AwardDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,8 +29,10 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/events/:id" element={<EventDetail />} />
               <Route path="/publications" element={<Publications />} />
               <Route path="/awards" element={<Awards />} />
+              <Route path="/awards/:id" element={<AwardDetail />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
             <Route path="*" element={<NotFound />} />

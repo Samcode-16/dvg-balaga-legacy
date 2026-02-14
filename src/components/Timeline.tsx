@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { AwardEntry } from '@/data/content';
-import { Award } from 'lucide-react';
+import { Award, Image as ImageIcon } from 'lucide-react';
 
 interface TimelineProps {
   awards: AwardEntry[];
@@ -28,25 +29,40 @@ const Timeline = ({ awards }: TimelineProps) => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`w-full md:w-[calc(50%-2rem)] ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
-                <div className="card-literary p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
-                    <span className="text-lg font-bold text-gold font-display">{award.year}</span>
-                  </div>
-                  <h3 className="font-display text-lg font-bold text-foreground">
-                    {recipient}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {citation}
-                  </p>
-                  {(award.president || award.chiefGuest) && (
-                    <div className="mt-3 text-xs text-muted-foreground italic">
-                      {award.president && <span>{t('President', 'ಅಧ್ಯಕ್ಷರು')}: {award.president}</span>}
-                      {award.president && award.chiefGuest && <span> · </span>}
-                      {award.chiefGuest && <span>{t('Chief Guest', 'ಮುಖ್ಯ ಅತಿಥಿ')}: {award.chiefGuest}</span>}
+                <Link to={`/awards/${award.id}`} className="block group">
+                  <div className="card-literary p-5 transition-shadow group-hover:shadow-lg group-hover:border-gold/40">
+                    {/* Photo frame */}
+                    <div className={`mb-4 flex ${isLeft ? 'md:justify-end' : 'md:justify-start'} justify-start`}>
+                      <div className="relative h-20 w-20 overflow-hidden rounded-full border-3 border-gold/50 bg-muted shadow-md transition-transform group-hover:scale-105">
+                        <div className="flex h-full w-full flex-col items-center justify-center">
+                          <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
+                          <span className="text-[10px] text-muted-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </div>
+
+                    <div className="flex items-center gap-2 mb-2">
+                      <Award className="h-4 w-4 text-gold shrink-0" aria-hidden="true" />
+                      <span className="text-lg font-bold text-gold font-display">{award.year}</span>
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                      {recipient}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                      {citation}
+                    </p>
+                    {(award.president || award.chiefGuest) && (
+                      <div className="mt-3 text-xs text-muted-foreground italic">
+                        {award.president && <span>{t('President', 'ಅಧ್ಯಕ್ಷರು')}: {award.president}</span>}
+                        {award.president && award.chiefGuest && <span> · </span>}
+                        {award.chiefGuest && <span>{t('Chief Guest', 'ಮುಖ್ಯ ಅತಿಥಿ')}: {award.chiefGuest}</span>}
+                      </div>
+                    )}
+                    <p className="mt-3 text-xs font-medium text-primary group-hover:underline">
+                      {t('View Details →', 'ವಿವರ ನೋಡಿ →')}
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 h-4 w-4 items-center justify-center rounded-full border-2 border-gold bg-background" aria-hidden="true">

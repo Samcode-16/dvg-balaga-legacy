@@ -4,11 +4,15 @@ import Hero from '@/components/Hero';
 import EventCard from '@/components/EventCard';
 import PublicationCard from '@/components/PublicationCard';
 import SectionHeading from '@/components/SectionHeading';
-import { events, publications, awards } from '@/data/content';
-import { Award, BookOpen, Calendar, ArrowRight } from 'lucide-react';
+import { useEvents, usePublications, useAwards } from '@/hooks/useContent';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Award, BookOpen, Calendar, ArrowRight, Image as ImageIcon } from 'lucide-react';
 
 const Index = () => {
   const { language, t } = useLanguage();
+  const { data: events = [], isLoading: eventsLoading } = useEvents();
+  const { data: publications = [], isLoading: pubsLoading } = usePublications();
+  const { data: awards = [], isLoading: awardsLoading } = useAwards();
   const latestEvents = events.slice(0, 3);
   const featuredPubs = publications.slice(0, 2);
   const recentAwards = awards.slice(-3).reverse();
@@ -62,9 +66,13 @@ const Index = () => {
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {latestEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
+            {eventsLoading
+              ? Array.from({ length: 3 }).map((_, i) => (
+                  <Skeleton key={i} className="h-48 rounded-lg" />
+                ))
+              : latestEvents.map((event) => (
+                  <EventCard key={event.id} event={event} />
+                ))}
           </div>
 
           <div className="mt-8 text-center">
@@ -90,9 +98,13 @@ const Index = () => {
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {featuredPubs.map((pub) => (
-              <PublicationCard key={pub.id} publication={pub} />
-            ))}
+            {pubsLoading
+              ? Array.from({ length: 2 }).map((_, i) => (
+                  <Skeleton key={i} className="h-64 rounded-lg" />
+                ))
+              : featuredPubs.map((pub) => (
+                  <PublicationCard key={pub.id} publication={pub} />
+                ))}
           </div>
 
           <div className="mt-8 text-center">
@@ -119,18 +131,30 @@ const Index = () => {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {recentAwards.map((award) => (
-              <div key={award.id} className="card-literary p-6 text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
-                  <Award className="h-7 w-7 text-gold" aria-hidden="true" />
+              <Link key={award.id} to={`/awards/${award.id}`} className="group">
+                <div className="card-literary p-6 text-center transition-shadow group-hover:shadow-lg group-hover:border-gold/40">
+                  {/* Photo frame */}
+                  <div className="mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full border-3 border-gold/50 bg-muted shadow-md transition-transform group-hover:scale-105">
+                    <div className="flex h-full w-full flex-col items-center justify-center">
+                      <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
+                      <span className="text-[10px] text-muted-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
+                    </div>
+                  </div>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
+                    <Award className="h-5 w-5 text-gold" aria-hidden="true" />
+                  </div>
+                  <p className="mt-3 font-display text-2xl font-bold text-gold">{award.year}</p>
+                  <h3 className="mt-2 font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                    {language === 'en' ? award.recipient : award.recipientKn}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
+                    {award.citation[language]}
+                  </p>
+                  <p className="mt-3 text-xs font-medium text-primary group-hover:underline">
+                    {t('View Details →', 'ವಿವರ ನೋಡಿ →')}
+                  </p>
                 </div>
-                <p className="mt-3 font-display text-2xl font-bold text-gold">{award.year}</p>
-                <h3 className="mt-2 font-display text-lg font-bold text-foreground">
-                  {language === 'en' ? award.recipient : award.recipientKn}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground line-clamp-2">
-                  {award.citation[language]}
-                </p>
-              </div>
+              </Link>
             ))}
           </div>
 

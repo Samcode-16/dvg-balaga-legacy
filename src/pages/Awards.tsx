@@ -1,11 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import Timeline from '@/components/Timeline';
 import SectionHeading from '@/components/SectionHeading';
-import { awards } from '@/data/content';
+import { useAwards } from '@/hooks/useContent';
+import { Skeleton } from '@/components/ui/skeleton';
 import { Award } from 'lucide-react';
 
 const Awards = () => {
   const { language, t } = useLanguage();
+  const { data: awards = [], isLoading } = useAwards();
 
   return (
     <>
@@ -37,7 +39,15 @@ const Awards = () => {
           />
 
           <div className="mt-12">
-            <Timeline awards={awards} />
+            {isLoading ? (
+              <div className="space-y-4">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <Skeleton key={i} className="h-24 rounded-lg" />
+                ))}
+              </div>
+            ) : (
+              <Timeline awards={awards} />
+            )}
           </div>
         </div>
       </section>

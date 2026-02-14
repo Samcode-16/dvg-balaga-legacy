@@ -1,0 +1,66 @@
+[
+  {
+    "id": "sanskrti",
+    "title": {
+      "en": "Sanskrti — English Translation by Prof. L S Sheshagiri Rao",
+      "kn": "ಸಂಸ್ಕೃತಿ — ಪ್ರೊ. ಎಲ್.ಎಸ್. ಶೇಷಗಿರಿ ರಾವ್ ಅವರ ಇಂಗ್ಲಿಷ್ ಅನುವಾದ"
+    },
+    "author": "DVG (translated by Prof. L S Sheshagiri Rao)",
+    "description": {
+      "en": "An English translation of DVG's 'Sanskrti', originally translated by Prof. L S Sheshagiri Rao. The manuscript was brought to DVG Balaga by Sri A Narasimha Bhat, the 2018 DVG Award recipient, who also offered his award money towards publication. Released by Sri S Divakar in 2018.",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಅವರ 'ಸಂಸ್ಕೃತಿ' ಯ ಇಂಗ್ಲಿಷ್ ಅನುವಾದ. ಪ್ರೊ. ಎಲ್.ಎಸ್. ಶೇಷಗಿರಿ ರಾವ್ ಅವರು ಅನುವಾದಿಸಿದ್ದರು. ೨೦೧೮ ರ ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ಪುರಸ್ಕೃತ ಶ್ರೀ ಎ. ನರಸಿಂಹ ಭಟ್ ಅವರು ಹಸ್ತಪ್ರತಿಯನ್ನು ತಂದಿದ್ದರು."
+    },
+    "year": 2018,
+    "price": 350,
+    "type": "translation",
+    "coverPlaceholder": "[Book Cover Placeholder — Sanskrti]"
+  },
+  {
+    "id": "it-yinda-meti",
+    "title": {
+      "en": "It Yinda Meti — From IT to Agriculture",
+      "kn": "ಐಟಿ ಯಿಂದ ಮೇಟಿ"
+    },
+    "author": "Vasanth Kaje",
+    "description": {
+      "en": "The inspiring story of Vasanth Kaje, a software engineer who returned to agriculture. Published through crowdfunding by DVG Balaga Prathisthana, this book paved the way for many future publications.",
+      "kn": "ಸಾಫ್ಟ್‌ವೇರ್ ಎಂಜಿನಿಯರ್‌ನಿಂದ ಕೃಷಿಗೆ ಮರಳಿದ ವಸಂತ ಕಜೆ ಅವರ ಸ್ಫೂರ್ತಿದಾಯಕ ಕಥೆ. ಜನಸಂಗ್ರಹ ನಿಧಿ ಮೂಲಕ ಪ್ರಕಟಿಸಲಾಗಿದೆ."
+    },
+    "year": 2017,
+    "price": 200,
+    "type": "original",
+    "coverPlaceholder": "[Book Cover Placeholder — It Yinda Meti]"
+  },
+  {
+    "id": "mankuthimmana-kagga-artha",
+    "title": {
+      "en": "Mankuthimmana Kagga — Artha & Vyakhyana (2 Volumes)",
+      "kn": "ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ — ಅರ್ಥ ಮತ್ತು ವ್ಯಾಖ್ಯಾನ (೨ ಸಂಪುಟಗಳು)"
+    },
+    "author": "TaNaShi (Commentary), Jay Salian & Roopashree (Illustrations)",
+    "description": {
+      "en": "A comprehensive commentary and interpretation of DVG's Mankuthimmana Kagga in 2 volumes by TaNaShi of DVG Balaga. Features illustrations in Kagga by Sri Jay Salian and Smt. Roopashree of Bengaluru.",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಬಳಗದ ತಾನಾಶಿ ಅವರಿಂದ ಡಿ.ವಿ.ಜಿ ಅವರ ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗದ ವ್ಯಾಪಕ ವ್ಯಾಖ್ಯಾನ. ೨ ಸಂಪುಟಗಳಲ್ಲಿ."
+    },
+    "year": 2019,
+    "price": 600,
+    "type": "commentary",
+    "coverPlaceholder": "[Book Cover Placeholder — Mankuthimmana Kagga Commentary]"
+  },
+  {
+    "id": "dvg-illustrated-children",
+    "title": {
+      "en": "DVG — An Illustrated Book for Children",
+      "kn": "ಡಿ.ವಿ.ಜಿ — ಮಕ್ಕಳಿಗಾಗಿ ಚಿತ್ರ ಪುಸ್ತಕ"
+    },
+    "author": "Satyesh Bellur (Story), Gujjarappa (Illustrations)",
+    "description": {
+      "en": "An illustrated book on DVG created through Sri Satyesh Bellur's efforts. He wrote the story and collaborated with Artist Sri Gujjarappa to create this illustrative book. Released by Dr. Gururaja Karajagi in Bengaluru.",
+      "kn": "ಶ್ರೀ ಸತ್ಯೇಶ ಬೆಳ್ಳೂರು ಅವರ ಪ್ರಯತ್ನದಿಂದ ಡಿ.ವಿ.ಜಿ ಕುರಿತ ಚಿತ್ರ ಪುಸ್ತಕ. ಕಲಾವಿದ ಶ್ರೀ ಗುಜ್ಜಾರಪ್ಪ ಅವರೊಂದಿಗೆ ಸಹಕಾರ."
+    },
+    "year": 2024,
+    "price": 250,
+    "type": "children",
+    "coverPlaceholder": "[Book Cover Placeholder — DVG Illustrated]"
+  }
+]
