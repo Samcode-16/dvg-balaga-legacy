@@ -11,8 +11,7 @@ import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import Publications from "./pages/Publications";
 import Awards from "./pages/Awards";
-import AwardDetail from "./pages/AwardDetail";
-import Contact from "./pages/Contact";
+import AwardDetail from "./pages/AwardDetail";import Founder from './pages/Founder';import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +32,7 @@ const App = () => (
               <Route path="/publications" element={<Publications />} />
               <Route path="/awards" element={<Awards />} />
               <Route path="/awards/:id" element={<AwardDetail />} />
+              <Route path="/founder" element={<Founder />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
             <Route path="*" element={<NotFound />} />

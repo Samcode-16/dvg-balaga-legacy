@@ -30,7 +30,14 @@ export interface AboutData {
   };
   milestones: { year: string; en: string; kn: string }[];
   trustees: { name: { en: string; kn: string }; role: { en: string; kn: string }; photo?: string }[];
-  founder: { en: string; kn: string };
+  founder: {
+    en: string;
+    kn: string;
+    name?: { en: string; kn: string };
+    title?: { en: string; kn: string };
+    photo?: string;
+    bio?: { en: string[]; kn: string[] };
+  };
 }
 
 export function useEvents() {
