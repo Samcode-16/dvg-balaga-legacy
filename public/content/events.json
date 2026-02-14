@@ -11,7 +11,9 @@
     },
     "date": "2014",
     "location": "Nadabrahma Sangeetha Sabha, Mysuru",
-    "type": "upanyasa"
+    "type": "upanyasa",
+    "photo": "/images/events/mankuthimmana-saptaha-2016.jpg",
+    "gallery": []
   },
   {
     "id": "dvg-award-2024",
@@ -27,7 +29,9 @@
     "location": "TBD",
     "type": "award",
     "president": "Dr. Gururaja Karajagi",
-    "chiefGuest": "Sri K C Shivappa"
+    "chiefGuest": "Sri K C Shivappa",
+    "photo": "/images/events/dvg-award-2024.jpg",
+    "gallery": []
   },
   {
     "id": "geetha-shankara-2025",
@@ -41,7 +45,9 @@
     },
     "date": "May 2025",
     "location": "Nadabrahma Sangeetha Sabha, Mysuru",
-    "type": "seminar"
+    "type": "seminar",
+    "photo": "/images/events/geetha-shankara-2025.jpg",
+    "gallery": []
   },
   {
     "id": "dvg-sahitya-seminar-2026",
@@ -55,6 +61,8 @@
     },
     "date": "November 2026",
     "location": "TBD",
-    "type": "seminar"
+    "type": "seminar",
+    "photo": "/images/events/dvg-sahitya-seminar-2026.jpg",
+    "gallery": []
   }
 ]

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Hero from '@/components/Hero';
 import EventCard from '@/components/EventCard';
@@ -7,6 +8,30 @@ import SectionHeading from '@/components/SectionHeading';
 import { useEvents, usePublications, useAwards } from '@/hooks/useContent';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Award, BookOpen, Calendar, ArrowRight, Image as ImageIcon } from 'lucide-react';
+
+/** Small component so each award card can track its own image error */
+const AwardCardPhoto = ({ award, label }: { award: { photo?: string; recipient: string }; label: string }) => {
+  const [imgError, setImgError] = useState(false);
+  const hasPhoto = award.photo && !imgError;
+
+  if (hasPhoto) {
+    return (
+      <img
+        src={award.photo}
+        alt={award.recipient}
+        className="h-full w-full object-cover"
+        onError={() => setImgError(true)}
+      />
+    );
+  }
+
+  return (
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
+      <span className="text-[10px] text-muted-foreground/40">{label}</span>
+    </div>
+  );
+};
 
 const Index = () => {
   const { language, t } = useLanguage();
@@ -135,10 +160,7 @@ const Index = () => {
                 <div className="card-literary p-6 text-center transition-shadow group-hover:shadow-lg group-hover:border-gold/40">
                   {/* Photo frame */}
                   <div className="mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full border-3 border-gold/50 bg-muted shadow-md transition-transform group-hover:scale-105">
-                    <div className="flex h-full w-full flex-col items-center justify-center">
-                      <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
-                      <span className="text-[10px] text-muted-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
-                    </div>
+                    <AwardCardPhoto award={award} label={t('Photo', 'ಫೋಟೊ')} />
                   </div>
                   <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-gold/10">
                     <Award className="h-5 w-5 text-gold" aria-hidden="true" />

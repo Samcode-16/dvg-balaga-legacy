@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { AwardEntry } from '@/data/content';
 import { Award, Image as ImageIcon } from 'lucide-react';
@@ -6,6 +7,30 @@ import { Award, Image as ImageIcon } from 'lucide-react';
 interface TimelineProps {
   awards: AwardEntry[];
 }
+
+/** Small wrapper so each award can track its own image error state */
+const AwardPhoto = ({ award, label }: { award: AwardEntry; label: string }) => {
+  const [imgError, setImgError] = useState(false);
+  const hasPhoto = award.photo && !imgError;
+
+  if (hasPhoto) {
+    return (
+      <img
+        src={award.photo}
+        alt={award.recipient}
+        className="h-full w-full object-cover"
+        onError={() => setImgError(true)}
+      />
+    );
+  }
+
+  return (
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
+      <span className="text-[10px] text-muted-foreground/40">{label}</span>
+    </div>
+  );
+};
 
 const Timeline = ({ awards }: TimelineProps) => {
   const { language, t } = useLanguage();
@@ -34,10 +59,7 @@ const Timeline = ({ awards }: TimelineProps) => {
                     {/* Photo frame */}
                     <div className={`mb-4 flex ${isLeft ? 'md:justify-end' : 'md:justify-start'} justify-start`}>
                       <div className="relative h-20 w-20 overflow-hidden rounded-full border-3 border-gold/50 bg-muted shadow-md transition-transform group-hover:scale-105">
-                        <div className="flex h-full w-full flex-col items-center justify-center">
-                          <ImageIcon className="h-6 w-6 text-muted-foreground/30" aria-hidden="true" />
-                          <span className="text-[10px] text-muted-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
-                        </div>
+                        <AwardPhoto award={award} label={t('Photo', 'ಫೋಟೊ')} />
                       </div>
                     </div>
 

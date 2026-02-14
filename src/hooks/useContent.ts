@@ -29,7 +29,7 @@ export interface AboutData {
     future: string;
   };
   milestones: { year: string; en: string; kn: string }[];
-  trustees: { name: { en: string; kn: string }; role: { en: string; kn: string } }[];
+  trustees: { name: { en: string; kn: string }; role: { en: string; kn: string }; photo?: string }[];
   founder: { en: string; kn: string };
 }
 

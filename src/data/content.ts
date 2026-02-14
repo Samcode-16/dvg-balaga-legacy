@@ -8,6 +8,8 @@ export interface Event {
   type: 'upanyasa' | 'award' | 'seminar' | 'camp' | 'release';
   chiefGuest?: string;
   president?: string;
+  photo?: string;
+  gallery?: string[];
 }
 
 export interface Publication {
@@ -29,6 +31,8 @@ export interface AwardEntry {
   citation: { en: string; kn: string };
   president?: string;
   chiefGuest?: string;
+  photo?: string;
+  gallery?: string[];
 }
 
 export const events: Event[] = [

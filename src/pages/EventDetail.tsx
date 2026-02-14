@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEvents } from '@/hooks/useContent';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -42,6 +43,7 @@ const EventDetail = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useLanguage();
   const { data: events = [], isLoading } = useEvents();
+  const [heroError, setHeroError] = useState(false);
 
   const event = events.find((e) => e.id === id);
 
@@ -78,8 +80,21 @@ const EventDetail = () => {
 
   return (
     <>
+      {/* Hero photo banner */}
+      {event.photo && !heroError && (
+        <div className="relative h-56 w-full overflow-hidden md:h-72 lg:h-80">
+          <img
+            src={event.photo}
+            alt={title}
+            className="h-full w-full object-cover"
+            onError={() => setHeroError(true)}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/60 to-primary/90" />
+        </div>
+      )}
+
       {/* Hero */}
-      <section className="bg-primary py-16 text-primary-foreground md:py-24">
+      <section className={`bg-primary ${event.photo && !heroError ? 'pt-0 pb-16 md:pb-24' : 'py-16 md:py-24'} text-primary-foreground`}>
         <div className="container mx-auto max-w-4xl px-4">
           <Link
             to="/events"
@@ -182,23 +197,40 @@ const EventDetail = () => {
         </div>
       </section>
 
-      {/* Gallery placeholders */}
+      {/* Gallery */}
       <section className="bg-muted/30 py-12 md:py-16">
         <div className="container mx-auto max-w-4xl px-4">
           <h2 className="font-display text-2xl font-bold text-foreground">
             {t('Gallery', 'ಗ್ಯಾಲರಿ')}
           </h2>
-          <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-4">
-            {demoGallery.map((caption, i) => (
-              <div key={i} className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/20 bg-muted/50 p-6 text-center">
-                <ImageIcon className="mb-2 h-8 w-8 text-muted-foreground/40" aria-hidden="true" />
-                <p className="text-xs text-muted-foreground">{caption}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm italic text-muted-foreground">
-            {t('* Photos will be added soon.', '* ಫೋಟೋಗಳನ್ನು ಶೀಘ್ರದಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದು.')}
-          </p>
+          {event.gallery && event.gallery.length > 0 ? (
+            <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-4">
+              {event.gallery.map((src, i) => (
+                <div key={i} className="overflow-hidden rounded-lg shadow-sm">
+                  <img
+                    src={src}
+                    alt={`${title} - ${i + 1}`}
+                    className="h-40 w-full object-cover transition-transform duration-300 hover:scale-105"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-4">
+              {demoGallery.map((caption, i) => (
+                <div key={i} className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/20 bg-muted/50 p-6 text-center">
+                  <ImageIcon className="mb-2 h-8 w-8 text-muted-foreground/40" aria-hidden="true" />
+                  <p className="text-xs text-muted-foreground">{caption}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {(!event.gallery || event.gallery.length === 0) && (
+            <p className="mt-4 text-sm italic text-muted-foreground">
+              {t('* Photos will be added soon.', '* ಫೋಟೋಗಳನ್ನು ಶೀಘ್ರದಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದು.')}
+            </p>
+          )}
         </div>
       </section>
 

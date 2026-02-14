@@ -14,19 +14,19 @@ const Header = () => {
   const logo = new URL('@/assets/logo.jpeg', import.meta.url).href;
   return (
       <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="container mx-auto flex items-center justify-between px-6 py-4 md:px-8 md:py-5">
+        <div className="container mx-auto flex items-center justify-between px-6 py-5 md:px-8 md:py-6">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="DVG Balaga Logo" className="h-10 w-10 rounded-full object-cover border border-primary" />
+            <img src={logo} alt="DVG Balaga Logo" className="h-14 w-14 rounded-full object-cover border-2 border-primary shadow-sm" />
             <div className="hidden sm:block">
-              <h1 className="font-display text-lg font-bold leading-tight text-foreground">
+              <h1 className="font-display text-xl font-bold leading-tight text-foreground">
                 {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
               </h1>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 {t('Mysuru', 'ಮೈಸೂರು')}
               </p>
             </div>
             <div className="block sm:hidden">
-              <span className="font-display text-base font-bold text-foreground ml-2">
+              <span className="font-display text-lg font-bold text-foreground ml-2">
                 {t('DVG Balaga Prathisthana', 'ಡಿ.ವಿ.ಜಿ ಬಳಗ ಪ್ರತಿಷ್ಠಾನ')}
               </span>
             </div>

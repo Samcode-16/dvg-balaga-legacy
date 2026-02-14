@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Calendar, MapPin, Users, Image as ImageIcon } from 'lucide-react';
 import type { Event } from '@/data/content';
@@ -17,19 +18,30 @@ const typeLabels = {
 
 const EventCard = ({ event }: EventCardProps) => {
   const { language, t } = useLanguage();
+  const [imgError, setImgError] = useState(false);
   const title = event.title[language];
   const description = event.description[language];
   const typeLabel = typeLabels[event.type][language];
+  const hasPhoto = event.photo && !imgError;
 
   return (
     <article className="card-literary overflow-hidden p-0 group">
-      {/* Photo banner placeholder */}
+      {/* Photo banner */}
       <Link to={`/events/${event.id}`} className="block">
         <div className="relative h-40 w-full bg-gradient-to-br from-primary/10 via-gold/5 to-primary/5 overflow-hidden">
-          <div className="flex h-full w-full flex-col items-center justify-center">
-            <ImageIcon className="h-10 w-10 text-muted-foreground/20" aria-hidden="true" />
-            <span className="mt-1 text-xs text-muted-foreground/30">{t('Event Photo', 'ಕಾರ್ಯಕ್ರಮ ಫೋಟೊ')}</span>
-          </div>
+          {hasPhoto ? (
+            <img
+              src={event.photo}
+              alt={title}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              onError={() => setImgError(true)}
+            />
+          ) : (
+            <div className="flex h-full w-full flex-col items-center justify-center">
+              <ImageIcon className="h-10 w-10 text-muted-foreground/20" aria-hidden="true" />
+              <span className="mt-1 text-xs text-muted-foreground/30">{t('Event Photo', 'ಕಾರ್ಯಕ್ರಮ ಫೋಟೊ')}</span>
+            </div>
+          )}
           <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-background/80 to-transparent" />
           <div className="absolute top-3 left-3">
             <span className="badge-award">{typeLabel}</span>

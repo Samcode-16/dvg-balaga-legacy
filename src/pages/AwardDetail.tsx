@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAwards } from '@/hooks/useContent';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -46,6 +47,7 @@ const AwardDetail = () => {
   const { id } = useParams<{ id: string }>();
   const { language, t } = useLanguage();
   const { data: awards = [], isLoading } = useAwards();
+  const [photoError, setPhotoError] = useState(false);
 
   const award = awards.find((a) => a.id === id);
 
@@ -96,10 +98,19 @@ const AwardDetail = () => {
             {/* Photo frame */}
             <div className="mb-6 shrink-0 md:mb-0">
               <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-gold/60 bg-primary-foreground/10 shadow-lg">
-                <div className="flex h-full w-full flex-col items-center justify-center">
-                  <ImageIcon className="h-10 w-10 text-primary-foreground/30" aria-hidden="true" />
-                  <span className="mt-1 text-xs text-primary-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
-                </div>
+                {award.photo && !photoError ? (
+                  <img
+                    src={award.photo}
+                    alt={recipient}
+                    className="h-full w-full object-cover"
+                    onError={() => setPhotoError(true)}
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center">
+                    <ImageIcon className="h-10 w-10 text-primary-foreground/30" aria-hidden="true" />
+                    <span className="mt-1 text-xs text-primary-foreground/40">{t('Photo', 'ಫೋಟೊ')}</span>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -180,23 +191,40 @@ const AwardDetail = () => {
         </div>
       </section>
 
-      {/* Gallery placeholders */}
+      {/* Gallery */}
       <section className="bg-muted/30 py-12 md:py-16">
         <div className="container mx-auto max-w-4xl px-4">
           <h2 className="font-display text-2xl font-bold text-foreground">
             {t('Gallery', 'ಗ್ಯಾಲರಿ')}
           </h2>
-          <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-3">
-            {demoGallery.map((caption, i) => (
-              <div key={i} className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/20 bg-muted/50 p-8 text-center">
-                <ImageIcon className="mb-2 h-8 w-8 text-muted-foreground/40" aria-hidden="true" />
-                <p className="text-xs text-muted-foreground">{caption}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm italic text-muted-foreground">
-            {t('* Photos will be added soon.', '* ಫೋಟೋಗಳನ್ನು ಶೀಘ್ರದಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದು.')}
-          </p>
+          {award.gallery && award.gallery.length > 0 ? (
+            <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-3">
+              {award.gallery.map((src, i) => (
+                <div key={i} className="overflow-hidden rounded-lg shadow-sm">
+                  <img
+                    src={src}
+                    alt={`${recipient} - ${i + 1}`}
+                    className="h-40 w-full object-cover transition-transform duration-300 hover:scale-105"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-3">
+              {demoGallery.map((caption, i) => (
+                <div key={i} className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted-foreground/20 bg-muted/50 p-8 text-center">
+                  <ImageIcon className="mb-2 h-8 w-8 text-muted-foreground/40" aria-hidden="true" />
+                  <p className="text-xs text-muted-foreground">{caption}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {(!award.gallery || award.gallery.length === 0) && (
+            <p className="mt-4 text-sm italic text-muted-foreground">
+              {t('* Photos will be added soon.', '* ಫೋಟೋಗಳನ್ನು ಶೀಘ್ರದಲ್ಲಿ ಸೇರಿಸಲಾಗುವುದು.')}
+            </p>
+          )}
         </div>
       </section>
 

@@ -1,8 +1,28 @@
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useAbout } from '@/hooks/useContent';
 import SectionHeading from '@/components/SectionHeading';
 import { Skeleton } from '@/components/ui/skeleton';
 import heroImage from '@/assets/hero-literary.jpg';
+
+/** Per-trustee photo with fallback to initial letter */
+const TrusteePhoto = ({ trustee, language }: { trustee: { name: { en: string; kn: string }; photo?: string }; language: 'en' | 'kn' }) => {
+  const [imgError, setImgError] = useState(false);
+  const hasPhoto = trustee.photo && !imgError;
+
+  if (hasPhoto) {
+    return (
+      <img
+        src={trustee.photo}
+        alt={trustee.name[language]}
+        className="h-full w-full object-cover"
+        onError={() => setImgError(true)}
+      />
+    );
+  }
+
+  return <span className="font-display text-2xl font-bold">{trustee.name[language].charAt(0)}</span>;
+};
 
 const About = () => {
   const { language, t } = useLanguage();
@@ -94,8 +114,8 @@ const About = () => {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {trustees.map((trustee, i) => (
               <div key={i} className="rounded-lg border border-primary-foreground/20 p-6">
-                <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-primary-foreground/10">
-                  <span className="font-display text-2xl font-bold">{trustee.name[language].charAt(0)}</span>
+                <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-primary-foreground/10">
+                  <TrusteePhoto trustee={trustee} language={language} />
                 </div>
                 <h3 className="font-display text-lg font-semibold">{trustee.name[language]}</h3>
                 <p className="mt-1 text-sm opacity-70">{trustee.role[language]}</p>

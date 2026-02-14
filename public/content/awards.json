@@ -8,7 +8,9 @@
       "en": "A great Sanskrit scholar and close associate of DVG. The first ever DVG Prashasti recipient.",
       "kn": "ಮಹಾನ್ ಸಂಸ್ಕೃತ ವಿದ್ವಾಂಸರು ಮತ್ತು ಡಿ.ವಿ.ಜಿ ಅವರ ಆಪ್ತ ಸಹಚರರು. ಮೊದಲ ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ಪುರಸ್ಕೃತರು."
     },
-    "president": "Dr. T V Venkatachalashastry"
+    "president": "Dr. T V Venkatachalashastry",
+    "photo": "/images/awards/award-2013.jpg",
+    "gallery": []
   },
   {
     "id": "award-2014",
@@ -19,7 +21,9 @@
       "en": "A close associate of DVG. The function was graced by noted novelist Dr. S L Bhyrappa and Sri Surya Prakash Pandith as chief guest.",
       "kn": "ಡಿ.ವಿ.ಜಿ ಅವರ ಆಪ್ತ ಸಹಚರರು. ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ ಪ್ರಸಿದ್ಧ ಕಾದಂಬರಿಕಾರ ಡಾ. ಎಸ್.ಎಲ್. ಭೈರಪ್ಪ ಅವರು ಉಪಸ್ಥಿತರಿದ್ದರು."
     },
-    "chiefGuest": "Dr. S L Bhyrappa, Sri Surya Prakash Pandith"
+    "chiefGuest": "Dr. S L Bhyrappa, Sri Surya Prakash Pandith",
+    "photo": "/images/awards/award-2014.jpg",
+    "gallery": []
   },
   {
     "id": "award-2017",
@@ -30,7 +34,9 @@
       "en": "Author of 'Bolu Basavana Bonthe'. The award was presided over by Sri M S Mahabaleswara, then MD & CEO of Karnataka Bank.",
       "kn": "'ಬೋಳು ಬಸವನ ಬೊಂತೆ' ಕೃತಿಯ ಲೇಖಕರು. ಕರ್ನಾಟಕ ಬ್ಯಾಂಕ್‌ನ ಅಂದಿನ ಎಮ್‌ಡಿ ಮತ್ತು ಸಿಇಓ ಶ್ರೀ ಎಂ.ಎಸ್. ಮಹಾಬಲೇಶ್ವರ ಅವರು ಅಧ್ಯಕ್ಷತೆ ವಹಿಸಿದ್ದರು."
     },
-    "president": "Sri M S Mahabaleswara"
+    "president": "Sri M S Mahabaleswara",
+    "photo": "/images/awards/award-2017.jpg",
+    "gallery": []
   },
   {
     "id": "award-2018",
@@ -40,7 +46,9 @@
     "citation": {
       "en": "Translator of Mankuthimmana Kagga and Marulamuniyana Kagga to English. He also brought the manuscript of DVG's 'Sanskrti' translated by Prof. L S Sheshagiri Rao.",
       "kn": "ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ ಮತ್ತು ಮರುಳಮುನಿಯನ ಕಗ್ಗವನ್ನು ಇಂಗ್ಲಿಷ್‌ಗೆ ಅನುವಾದಿಸಿದವರು."
-    }
+    },
+    "photo": "/images/awards/award-2018.jpg",
+    "gallery": []
   },
   {
     "id": "award-2019",
@@ -50,7 +58,9 @@
     "citation": {
       "en": "Noted litterateur, disciple of DVG, and author of 'Virakta Rashtraka DVG' and 'Kaggakondu Kaipidi'. The award was jointly conferred on his wife Saraswathi Venkataramanan.",
       "kn": "ಖ್ಯಾತ ಸಾಹಿತಿ, ಡಿ.ವಿ.ಜಿ ಶಿಷ್ಯರು, 'ವಿರಕ್ತ ರಾಷ್ಟ್ರಕ ಡಿ.ವಿ.ಜಿ' ಮತ್ತು 'ಕಗ್ಗಕೊಂದು ಕೈಪಿಡಿ' ಕೃತಿಗಳ ಲೇಖಕರು."
-    }
+    },
+    "photo": "/images/awards/award-2019.jpg",
+    "gallery": []
   },
   {
     "id": "award-2020",
@@ -61,7 +71,9 @@
       "en": "Noted Sanskrit scholar. Dr. H R Vishwas presided over the meeting.",
       "kn": "ಪ್ರಖ್ಯಾತ ಸಂಸ್ಕೃತ ವಿದ್ವಾಂಸರು. ಡಾ. ಎಚ್.ಆರ್. ವಿಶ್ವಾಸ ಅವರು ಸಭೆಯ ಅಧ್ಯಕ್ಷತೆ ವಹಿಸಿದ್ದರು."
     },
-    "president": "Dr. H R Vishwas"
+    "president": "Dr. H R Vishwas",
+    "photo": "/images/awards/award-2020.jpg",
+    "gallery": []
   },
   {
     "id": "award-2022",
@@ -72,7 +84,9 @@
       "en": "Felicitated with DVG award. The then VC of Mysuru University Dr. Hemanthkumar graced the occasion.",
       "kn": "ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿಯಿಂದ ಸನ್ಮಾನಿಸಲಾಯಿತು. ಮೈಸೂರು ವಿಶ್ವವಿದ್ಯಾಲಯದ ಅಂದಿನ ಕುಲಪತಿ ಡಾ. ಹೇಮಂತ್‌ಕುಮಾರ್ ಅವರು ಉಪಸ್ಥಿತರಿದ್ದರು."
     },
-    "chiefGuest": "Dr. Hemanthkumar (VC, Mysuru University)"
+    "chiefGuest": "Dr. Hemanthkumar (VC, Mysuru University)",
+    "photo": "/images/awards/award-2022.jpg",
+    "gallery": []
   },
   {
     "id": "award-2023",
@@ -83,7 +97,9 @@
       "en": "Known for Muddurama. Dr. Gururaja Karajagi presided over the function.",
       "kn": "ಮುದ್ದುರಾಮ ಖ್ಯಾತಿಯ. ಡಾ. ಗುರುರಾಜ ಕಾರಜಗಿ ಅವರು ಅಧ್ಯಕ್ಷತೆ ವಹಿಸಿದ್ದರು."
     },
-    "president": "Dr. Gururaja Karajagi"
+    "president": "Dr. Gururaja Karajagi",
+    "photo": "/images/awards/award-2023.jpg",
+    "gallery": []
   },
   {
     "id": "award-2024",
@@ -95,7 +111,9 @@
       "kn": "ಕವಿ ಮತ್ತು ಕಾರ್ಪೊರೇಟ್ ತರಬೇತುದಾರ. 'ನವ್ಯಜೀವಿ' ಎಂಬ ಮುಕ್ತಕ ಸಾಹಿತ್ಯವನ್ನು ಬರೆದಿದ್ದಾರೆ."
     },
     "president": "Dr. Gururaja Karajagi",
-    "chiefGuest": "Sri K C Shivappa"
+    "chiefGuest": "Sri K C Shivappa",
+    "photo": "/images/awards/award-2024.jpg",
+    "gallery": []
   },
   {
     "id": "award-2025",
@@ -106,6 +124,8 @@
       "en": "Popularly known as TaNaShi, conferred with the DVG Award. Famous musician Dr. R S Nandakumar was the Chief Guest.",
       "kn": "ತಾನಾಶಿ ಎಂದು ಪ್ರಸಿದ್ಧರಾದವರು. ಖ್ಯಾತ ಸಂಗೀತಗಾರ ಡಾ. ಆರ್.ಎಸ್. ನಂದಕುಮಾರ್ ಮುಖ್ಯ ಅತಿಥಿಯಾಗಿದ್ದರು."
     },
-    "chiefGuest": "Dr. R S Nandakumar"
+    "chiefGuest": "Dr. R S Nandakumar",
+    "photo": "/images/awards/award-2025.jpg",
+    "gallery": []
   }
 ]
