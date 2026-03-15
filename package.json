@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "content:normalize-media": "node scripts/normalize-cloudinary-content.mjs",
+    "predev": "npm run content:normalize-media",
     "dev": "vite",
+    "prebuild": "npm run content:normalize-media",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",

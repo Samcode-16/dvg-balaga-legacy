@@ -71,3 +71,33 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Cloudinary image setup
+
+This project supports both local images and Cloudinary-hosted images in the JSON files under `public/content/`.
+
+Set these environment variables in a `.env` file at project root:
+
+```sh
+VITE_CLOUDINARY_CLOUD_NAME=your-cloud-name
+VITE_CLOUDINARY_DELIVERY_PARAMS=f_auto,q_auto
+```
+
+Then in JSON (`events.json`, `awards.json`, `about.json`) you can use either:
+
+- Full URL:
+	`"photo": "https://res.cloudinary.com/your-cloud-name/image/upload/f_auto,q_auto/events/dvg-award-2024.jpg"`
+- Shorthand public ID:
+	`"photo": "cloudinary:events/dvg-award-2024.jpg"`
+
+`gallery` arrays also support shorthand values, for example:
+
+`"gallery": ["cloudinary:events/dvg-award-2024-1.jpg", "cloudinary:events/dvg-award-2024-2.jpg"]`
+
+Automatic normalization is enabled:
+
+- Running `npm run dev` or `npm run build` now auto-runs `npm run content:normalize-media` first.
+- The normalizer converts `/images/...` values inside `photo` and `gallery` fields to `cloudinary:...` in:
+	- `public/content/events.json`
+	- `public/content/awards.json`
+	- `public/content/about.json`

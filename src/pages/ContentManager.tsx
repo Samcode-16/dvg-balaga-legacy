@@ -145,6 +145,17 @@ function EventForm({
           <Input value={form.president || ''} onChange={(e) => update('president', e.target.value)} />
         </div>
       </div>
+      <div>
+        <Label>Cloudinary Gallery Folder (optional)</Label>
+        <Input
+          value={(form as any).galleryFolder || ''}
+          onChange={(e) => update('galleryFolder', e.target.value)}
+          placeholder="e.g. dvg-balaga/2024/event-name"
+        />
+        <p className="mt-1 text-xs text-muted-foreground">
+          Cloudinary folder path — gallery images are auto-synced from this folder when the site is built.
+        </p>
+      </div>
       <Button type="submit">
         <Plus className="mr-1 h-4 w-4" /> Add Event
       </Button>

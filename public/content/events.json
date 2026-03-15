@@ -9,10 +9,11 @@
       "en": "A grand 5-day discourse on DVG's Mankuthimmana Kagga by Vidwan G S Natesh at Nadabrahma Sangeetha Sabha, Mysuru. The programme drew a huge gathering with the hall overflowing with attendees.",
       "kn": "ಮೈಸೂರಿನ ನಾದಬ್ರಹ್ಮ ಸಂಗೀತ ಸಭೆಯಲ್ಲಿ ವಿದ್ವಾನ್ ಜಿ.ಎಸ್. ನಟೇಶ ಅವಸರು ನೀಡಿದ ಡಿ.ವಿ.ಜಿ ಅವರ ಮಂಕುತಿಮ್ಮನ ಕಗ್ಗ ಕುರಿತ ೫ ದಿನಗಳ ಭವ್ಯ ಉಪನ್ಯಾಸ. ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಅಪಾರ ಸಂಖ್ಯೆಯ ಸಾಹಿತ್ಯಾಸಕ್ತರು ಬಂದಿದ್ದರು."
     },
-    "date": "2014",
+    "date": "April 2014",
     "location": "Nadabrahma Sangeetha Sabha, Mysuru",
     "type": "upanyasa",
-    "photo": "/images/events/mankuthimmana-saptaha-2016.jpg",
+    "photo": "cloudinary:events/mankuthimmana-saptaha-2016.jpg",
+    "galleryFolder": "dvg-balaga/2014/Natesh-Upanyasa",
     "gallery": []
   },
   {
@@ -30,7 +31,8 @@
     "type": "award",
     "president": "Dr. Gururaja Karajagi",
     "chiefGuest": "Sri K C Shivappa",
-    "photo": "/images/events/dvg-award-2024.jpg",
+    "photo": "cloudinary:events/dvg-award-2024.jpg",
+    "galleryFolder": "dvg-balaga/2024",
     "gallery": []
   },
   {
@@ -46,7 +48,8 @@
     "date": "May 2025",
     "location": "Nadabrahma Sangeetha Sabha, Mysuru",
     "type": "seminar",
-    "photo": "/images/events/geetha-shankara-2025.jpg",
+    "photo": "cloudinary:events/geetha-shankara-2025.jpg",
+    "galleryFolder": "dvg-balaga/2025/ellarolageOndagu",
     "gallery": []
   },
   {
@@ -62,7 +65,7 @@
     "date": "November 2026",
     "location": "TBD",
     "type": "seminar",
-    "photo": "/images/events/dvg-sahitya-seminar-2026.jpg",
+    "photo": "cloudinary:events/dvg-sahitya-seminar-2026.jpg",
     "gallery": []
   }
 ]

@@ -54,7 +54,7 @@ const Contact = () => {
                     <h3 className="font-semibold text-foreground">
                       {t('Email', 'ಇಮೇಲ್')}
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">[email TBD]</p>
+                    <p className="mt-1 text-sm text-muted-foreground">dvgbalagaprathisthana@gmail.com</p>
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@ const Contact = () => {
                     <h3 className="font-semibold text-foreground">
                       {t('Phone', 'ದೂರವಾಣಿ')}
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">[phone TBD]</p>
+                    <p className="mt-1 text-sm text-muted-foreground">+91 9448973582</p>
                   </div>
                 </div>
               </div>

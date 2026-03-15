@@ -10,6 +10,8 @@ export interface Event {
   president?: string;
   photo?: string;
   gallery?: string[];
+  /** Cloudinary folder path — normalizer auto-populates gallery from this folder at build time */
+  galleryFolder?: string;
 }
 
 export interface Publication {

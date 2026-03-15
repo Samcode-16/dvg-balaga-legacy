@@ -1,12 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import type { Event, Publication, AwardEntry } from '@/data/content';
+import { normalizeMediaUrls } from '@/lib/media';
 
 const BASE_URL = import.meta.env.BASE_URL || '/';
 
 async function fetchJSON<T>(path: string): Promise<T> {
   const res = await fetch(`${BASE_URL}content/${path}`);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
-  return res.json();
+  const json = await res.json();
+  return normalizeMediaUrls<T>(json);
 }
 
 export interface AboutData {
