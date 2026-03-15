@@ -12,8 +12,25 @@
     "date": "April 2014",
     "location": "Nadabrahma Sangeetha Sabha, Mysuru",
     "type": "upanyasa",
-    "photo": "cloudinary:events/mankuthimmana-saptaha-2016.jpg",
+    "photo": "https://res.cloudinary.com/drpmrkqhc/image/upload/v1773562658/DSC_4894_cv0r0r.jpg",
     "galleryFolder": "dvg-balaga/2014/Natesh-Upanyasa",
+    "gallery": []
+  },
+  {
+    "id": "dvg-prashasti-2023-k-c-shivappa",
+    "title": {
+      "en": "DVG Prashasti 2023 - Dr. K C Shivappa",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ೨೦೨೩ - ಡಾ. ಕೆ.ಸಿ. ಶಿವಪ್ಪ"
+    },
+    "description": {
+      "en": "DVG Prashasti 2023 was conferred on Dr. K C Shivappa. The event celebrated his literary contribution and was presided over by Dr. Gururaja Karajagi.",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ೨೦೨೩ನ್ನು ಡಾ. ಕೆ.ಸಿ. ಶಿವಪ್ಪ ಅವರಿಗೆ ಪ್ರದಾನಿಸಲಾಯಿತು. ಅವರ ಸಾಹಿತ್ಯಿಕ ಕೊಡುಗೆಯನ್ನು ಆಚರಿಸಿದ ಈ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಡಾ. ಗುರುರಾಜ ಕಾರಜಗಿ ಅಧ್ಯಕ್ಷತೆ ವಹಿಸಿದ್ದರು."
+    },
+    "date": "2023",
+    "location": "TBD",
+    "type": "award",
+    "president": "Dr. Gururaja Karajagi",
+    "photo": "cloudinary:events/dvg-prashasti-2023-k-c-shivappa.jpg",
     "gallery": []
   },
   {
@@ -50,6 +67,25 @@
     "type": "seminar",
     "photo": "cloudinary:events/geetha-shankara-2025.jpg",
     "galleryFolder": "dvg-balaga/2025/ellarolageOndagu",
+    "gallery": []
+  },
+  {
+    "id": "dvg-award-2019",
+    "title": {
+      "en": "DVG Prashasti 2019",
+      "kn": "ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿ ೨೦೨"
+    },
+    "description": {
+      "en": "The DVG Award for 2019 was conferred on , a poet and corporate trainer who wrote 'Navyajeevi' as muktaka sahitya. Dr. Gururaja Karajagi presided over the meeting along with Sri K C Shivappa. The autobiography 'Saakshi' of Dr. Karajagi was also released during the occasion.",
+      "kn": "೨೦೨೪ ರ ಡಿ.ವಿ.ಜಿ ಪ್ರಶಸ್ತಿಯನ್ನು  ಅವರಿಗೆ ನೀಡಲಾಯಿತು."
+    },
+    "date": "2019",
+    "location": "Karnataka Bank old head office, Mangaluru",
+    "type": "award",
+    "president": "",
+    "chiefGuest": ".",
+    "photo": "cloudinary:events/dvg-award-2024.jpg",
+    "galleryFolder": "dvg-balaga/2024",
     "gallery": []
   },
   {
